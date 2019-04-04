@@ -13,4 +13,8 @@
     <string name="action_logout">Log Out</string>
     <string name="action_privacyPolicy">Privacy Policy</string>
 
+    <!--Activity_item-->
+    <string name="item_title">Ingrese el nombre del producto</string>
+    <string name="item_save">Guardar</string>
+
 </resources>

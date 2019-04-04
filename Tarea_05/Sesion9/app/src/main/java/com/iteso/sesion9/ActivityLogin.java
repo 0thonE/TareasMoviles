@@ -34,7 +34,7 @@ public class ActivityLogin extends AppCompatActivity {
             public void onClick(View v) {
                 savePreferences();
 
-                Intent intent = new Intent(ActivityLogin.this, MainActivity.class);
+                Intent intent = new Intent(ActivityLogin.this, ActivityMain.class);
                 startActivity(intent);
                 finish();
             }

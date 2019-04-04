@@ -3,6 +3,7 @@ package com.iteso.sesion9;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,20 +15,31 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
+import com.iteso.sesion9.beans.Store;
+import com.iteso.sesion9.database.DataBaseHandler;
+import com.iteso.sesion9.database.StoreControl;
 import com.iteso.sesion9.tools.Constant;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class ActivityMain extends AppCompatActivity {
 
     private static final int TOTAL_PAGES = 3;
     private FragmentTechnology fragmentTechnology;
     private FragmentHome fragmentHome;
     private FragmentElectronics fragmentElectronics;
+    private FloatingActionButton add;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        add = findViewById(R.id.activity_main_add);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -42,6 +54,20 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tabs);
         //Relate tabs with view pager content
         tabLayout.setupWithViewPager(mViewPager);
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityMain.this, ActivityItem.class);
+                startActivity(intent);
+            }
+        });
+
+//        ArrayList<Store> stores = new ArrayList<>();
+//        StoreControl storeControl = new StoreControl();
+//        stores = storeControl.getStores(DataBaseHandler.getInstance(this));
+
+//        Toast.makeText(this,stores.toString(),Toast.LENGTH_SHORT).show();
 
     }
 
@@ -118,13 +144,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_settings:
                 return true;
             case R.id.action_privacy_policy:
-                intent = new Intent(MainActivity.this, ActivityPrivacyPolicy.class);
+                intent = new Intent(ActivityMain.this, ActivityPrivacyPolicy.class);
                 startActivity(intent);
                 return true;
             case R.id.action_logout:
                 eraseUserPreferences();
 
-                intent = new Intent(MainActivity.this, ActivityLogin.class);
+                intent = new Intent(ActivityMain.this, ActivityLogin.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();

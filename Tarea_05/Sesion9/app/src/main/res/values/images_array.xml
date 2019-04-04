@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="images_spinner">
+        <item>Mac</item>
+        <item>Alienware</item>
+        <item>Sheets</item>
+        <item>Pillow</item>
+        <item>Refrigerator</item>
+        <item>Microwave</item>
+    </string-array>
+</resources>

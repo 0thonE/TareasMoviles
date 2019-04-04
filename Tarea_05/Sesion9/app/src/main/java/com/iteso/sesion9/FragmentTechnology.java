@@ -12,7 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.iteso.sesion9.beans.ItemProduct;
+import com.iteso.sesion9.database.DataBaseHandler;
+import com.iteso.sesion9.database.ItemProductControl;
 import com.iteso.sesion9.tools.Constant;
+import com.iteso.sesion9.tools.DBConstants;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,11 +34,16 @@ public class FragmentTechnology extends Fragment {
     public FragmentTechnology() {
     }
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_custom, container, false);
-        recyclerView =
-                view.findViewById(R.id.fragment_recycler);
+        recyclerView = view.findViewById(R.id.fragment_recycler);
+
+        ItemProductControl itemProductControl = new ItemProductControl();
+        products = itemProductControl.getItemProductByCategory( Constant.FRAGMENT_TECHNOLOGY, DataBaseHandler.getInstance(getContext()));
+        adapterProduct = new AdapterProduct(Constant.FRAGMENT_TECHNOLOGY, getActivity(), products);
+        recyclerView.setAdapter(adapterProduct);
+
+        itemProductControl = null;
 
         return view;
     }
@@ -50,9 +58,9 @@ public class FragmentTechnology extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
 
         products = new ArrayList<>();
-        products.add(new ItemProduct(1, "Mac", "BestBuy", "Zapopan", "3312345678", "Lorem Ipsum ....", Constant.TYPE_MAC));
-        products.add(new ItemProduct(2, "Alienware", "DELL", "Zapopan", "3312345678", "Lorem Ipsum ....", Constant.TYPE_ALIENWARE));
-        products.add(new ItemProduct(3, "Lanix", "Saint Jhonny", "Zapopan", "3312345678", "Lorem Ipsum ....", Constant.TYPE_ALIENWARE));
+//        products.add(new ItemProduct(1, "Mac", "BestBuy", "Zapopan", "3312345678", "Lorem Ipsum ....", Constant.TYPE_MAC));
+//        products.add(new ItemProduct(2, "Alienware", "DELL", "Zapopan", "3312345678", "Lorem Ipsum ....", Constant.TYPE_ALIENWARE));
+//        products.add(new ItemProduct(3, "Lanix", "Saint Jhonny", "Zapopan", "3312345678", "Lorem Ipsum ....", Constant.TYPE_ALIENWARE));
 
 
         adapterProduct = new AdapterProduct(Constant.FRAGMENT_TECHNOLOGY, getActivity(), products);

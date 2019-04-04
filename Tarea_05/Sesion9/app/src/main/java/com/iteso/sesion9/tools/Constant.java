@@ -21,4 +21,6 @@ public class Constant {
     public static final String PASSWORD = "PASSWORD";
     public static final String LOGGED = "LOGGED";
 
+    public static final String DATABASE = "DATABASE";
+
 }
