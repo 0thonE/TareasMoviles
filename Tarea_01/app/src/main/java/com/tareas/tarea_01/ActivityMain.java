@@ -1,9 +1,6 @@
 package com.tareas.tarea_01;
 
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -134,7 +131,7 @@ public class ActivityMain extends AppCompatActivity implements DialogErase.Dialo
         if (dataFilled()) {
             student = new Student();
             student.setName(name.getText().toString());
-            student.setPhone(Integer.parseInt(phone.getText().toString()));
+            student.setPhone(Double.parseDouble(phone.getText().toString()));
             student.setBook(book.getText().toString());
             student.setGenre(genre);
             student.setScholarship(spinner.getSelectedItemPosition());

@@ -2,7 +2,7 @@ package com.tareas.tarea_01.beans;
 
 public class Student {
     private String name, book;
-    private int phone;
+    private double phone;
     private boolean sports;
     private Genre genre;
     private Scholarship scholarship;
@@ -21,7 +21,7 @@ public class Student {
     public Student(){
     }
 
-    public Student(String name, String book, int phone, boolean sports, Genre genre, Scholarship scholarship) {
+    public Student(String name, String book, double phone, boolean sports, Genre genre, Scholarship scholarship) {
         this.name = name;
         this.book = book;
         this.phone = phone;
@@ -49,11 +49,11 @@ public class Student {
         this.book = book;
     }
 
-    public int getPhone() {
+    public double getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(double phone) {
         this.phone = phone;
     }
 
