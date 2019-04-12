@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="scholarship_array">
+        <item>@string/text_sch_highSch</item>
+        <item>@string/text_sch_technical</item>
+        <item>@string/text_sch_bachelor</item>
+        <item>@string/text_sch_master</item>
+        <item>@string/text_sch_ph</item>
+    </string-array>
+
+</resources>

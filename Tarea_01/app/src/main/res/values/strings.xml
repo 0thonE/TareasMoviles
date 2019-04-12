@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Tarea_01</string>
+
+    <string name="menu_save">Guardar</string>
+
+    <string name="toast_unfilled">Porfavor llene todos los campos</string>
+
+    <string name="edText_name_input">Ingrese su nombre</string>
+    <string name="edText_phone_input">Ingrese su teléfono</string>
+
+
+    <string name="text_scholarship">Escolaridad</string>
+        <string name="text_sch_highSch">Bachillerato</string>
+        <string name="text_sch_technical">Técnico</string>
+        <string name="text_sch_bachelor">Licenciatura</string>
+        <string name="text_sch_master">Maestría</string>
+        <string name="text_sch_ph">Doctorado</string>
+
+    <string name="text_genre">Género</string>
+        <string name="rButton_male_gne">Masculino</string>
+        <string name="rButton_female_gne">Femenino</string>
+
+    <string name="text_fav_book">Libro favorito</string>
+
+    <string name="text_sports">Práctica Deporte</string>
+
+    <string name="text_erase">Limpiar</string>
+        <string name="dialog_text_erase">¿Desea borrar los datos?</string>
+        <string name="dialog_ok">Ok</string>
+        <string name="dialog_cancel">Cancelar</string>
+
+</resources>

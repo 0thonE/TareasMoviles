@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="txtSize">20dp</dimen>
+
+    <dimen name="porc_80">0.8</dimen>
+    <dimen name="porc_70">0.7</dimen>
+    <dimen name="porc_50">0.5</dimen>
+
+</resources>
